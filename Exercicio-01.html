@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/CSS/bootstrap.css">
     <link rel="stylesheet" href="assets/CSS/dashboard.css">
+    <link rel="stylesheet" href="assets/CSS/JsDom.css">
 
     <title>Document</title>
 
@@ -107,21 +108,52 @@
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h1 class="h2">Exercício 01</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Exercicio 01</li>
+                        </ol>
+                    </nav>
                     <!--#endregion-->
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <q>Uma loja precisa de um programa para simular quanto um vendedor vai receber de salário bruto.
+                            Para isto a loja paga um salário comercial de 1.300 reais + 10% de comissão em cima do total
+                            de vendas. O vendedor irá usar o simulador informando: Quanto ele vendeu no mês, o programa
+                            deverá calcular e mostrar qual será o salário bruto dele no mês. </q>
 
-
-
+                    </div>
 
                 </div>
-        </div>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script src="https://getbootstrap.com.br/docs/4.1/dist/js/bootstrap.min.js"></script>
-        <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
-        <script>
-            feather.replace()
-        </script>
+                <form action="">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-5 col-lg-6">
+                            <label for="inputNomeVendedor">Nome do vendedor</label>
+                            <input id="inputNomeVendedor" type="text" class="form-control" required>
+                        </div>
+                        <div class="col-sm-12 col-md-4 col-lg-3">
+                            <label for="inputTotalVendas">Total de vendas no mês</label>
+                            <input id="inputTotalVendas" type="number" class="form-control" required>
+                        </div>
+                        <div class="col-sm-12 pt-28 col-md-2 col-lg-2">
+                            <button type="button" class="btn btn-success" onclick="simuladorSalario()"> Simular</button>
+                        </div>
+                    </div>
+                    <div id="menssagemResultado" class="row invisible">
+                       
+
+                    </div>
+                </form>
+                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                    crossorigin="anonymous"></script>
+                <script src="https://getbootstrap.com.br/docs/4.1/dist/js/bootstrap.min.js"></script>
+                <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+                <script src="assets/js/exercicio01.js"></script>
+                <script>
+                    feather.replace()
+                </script>
 </body>
 
 </html>
